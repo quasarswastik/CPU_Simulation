@@ -1,0 +1,13 @@
+# one process, computes and performs I/O, in turn, several times.
+#
+device	floppy	30000 bytes/sec
+#
+reboot
+#
+process 5 50 {
+	i/o	220	floppy	2100
+	i/o	320	floppy	1600
+	i/o	420	floppy	2100
+	exit	1600
+}
+#
