@@ -17,6 +17,6 @@ There are a number of ways to measure the effectiveness of an operating system's
 Under our simple operating system model, the time-quantum may be varied to permit each process to occupy the CPU for different lengths of time. Varying the time-quantum will result in the same job-mix exhibiting different total process completion times. With a short time-quantum, a system running many processes will give each of those processes a frequent chance to 'make progress', and will appear very responsive. With a long time-quantum, computationally-intensive processes can perform a lot of their execution, but delay the execution of other processes waiting for the CPU, and may make the system appear sluggish.
 Each job-mix (recorded in a tracefile) will have a near optimal time-quantum that minimises the total process completion time. If future job-mixes are similar to the one in a given tracefile, and we can determine a good time-quantum, then we can tune our process scheduling to match our anticipated job-mix.
 # Usage
-Compile with:  cc -std=c99 -Wall -Werror -o besttq besttq.c
-Use as:        besttq tracefile TQ-first TQ-final TQ-increment
+Compile with:  cc -std=c99 -Wall -Werror -o besttq besttq.c<br />
+Use as:        besttq tracefile TQ-first TQ-final TQ-increment<br />
                where TQ-final TQ-increment are optional
